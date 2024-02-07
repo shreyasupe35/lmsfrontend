@@ -3,6 +3,7 @@ import {FiMenu} from 'react-icons/fi'
 import Footer from '../compoents/Footer.jsx'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../redux/slices/authSlics.js";
 function HomeLayout({children}){
 
     const dispatch=useDispatch();
@@ -26,9 +27,10 @@ function HomeLayout({children}){
         drawerSide[0].style.width = '0';
     }
 
-    function onLogout(){
+    async function onLogout(){
         e.preventDefault();
-        //todo
+        const response=await dispatch(logout())
+        if(response?.payload?.data)
         navigate("/")
 
     }
@@ -80,11 +82,11 @@ function HomeLayout({children}){
                             <li className="absolute bottom-4  w-[90%]">
                                 <div className="w-full flex items-center justify-center">
                                     <button className="btn-primary px-4 py-1 font-semibold rounded-md w-full  bg-pink-600 text-white">
-                                        <Link to="/login">Login</Link>
+                                        <Link to="/siginin">Login</Link>
                                     </button>
                                     <button className="btn-secondary px-4 py-1 font-semibold rounded-md w-full
                                     bg-purple-600 text-white">
-                                        <Link to="/signup">Signup</Link>
+                                        <Link to="/siginup">Signup</Link>
                                     </button>
                                 </div>
                             </li>
