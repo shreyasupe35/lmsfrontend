@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound.jsx'
 import SiginUp from './pages/SiginUp'
 import Siginin from './pages/Siginin.jsx'
 import Contact from './pages/Contact.jsx'
+import Denied from './pages/Denied.jsx'
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Route path='/siginup' element={<SiginUp/>}/>
       <Route path='/siginin' element={<Siginin/>}/>
       <Route path='/contacts' element={<Contact/>}/>
+      <Route path='/denied' element={<Denied/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
   )
