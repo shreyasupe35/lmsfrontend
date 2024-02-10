@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx'
 import NotFound from './pages/NotFound.jsx'
 import SiginUp from './pages/SiginUp'
 import Siginin from './pages/Siginin.jsx'
+import Contact from './pages/Contact.jsx'
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path='/about' element={<AboutUs/>}/>
       <Route path='/siginup' element={<SiginUp/>}/>
       <Route path='/siginin' element={<Siginin/>}/>
+      <Route path='/contacts' element={<Contact/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
   )

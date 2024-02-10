@@ -27,7 +27,7 @@ function HomeLayout({children}){
         drawerSide[0].style.width = '0';
     }
 
-    async function onLogout(){
+    async function onLogout(e){
         e.preventDefault();
         const response=await dispatch(logout())
         if(response?.payload?.data)
@@ -72,7 +72,7 @@ function HomeLayout({children}){
                             <Link to="/about"> About us </Link>
                         </li>
                         <li>
-                            <Link to="/contact"> Contact us </Link>
+                            <Link to="/contacts"> Contact us </Link>
                         </li>
                         <li>
                             <Link to="/course"> All courses </Link>
